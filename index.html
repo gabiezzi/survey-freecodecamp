@@ -1,67 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
 
-<body>
+  <body>
     <h1 id="title">Club Montain Climbers Membership</h1>
-    <p id="description">Complete the form below to sign up for the membership of the CMC</p>
+    <p id="description">
+      Complete the form below to sign up for the membership of the CMC
+    </p>
 
     <form id="survey-form">
-        <fieldset>
+      <fieldset>
+        <label id="name-label"
+          >Full Name
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your full name"
+            required
+        /></label>
 
-            <label>Full Name <input id="name-label" type="text" placeholder="Enter your full name" required /></label>
+        <label id="email-label"
+          >Email
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            required
+        /></label>
 
-            <label>Email <input id="email-label" type="email" placeholder="Enter your email" required /></label>
+        <label id="number-label"
+          >Age (optional)
+          <input
+            id="number"
+            type="number"
+            min="13"
+            max="120"
+            placeholder="Age"
+        /></label>
+      </fieldset>
 
-            <label>Age (optional) <input id="number-label" type="number" min="13" max="120" placeholder="Age" /></label>
+      <fieldset>
+        <label
+          >Where did you hear about us?
+          <select id="dropdown">
+            <option>A Friend or colleauge</option>
+            <option>Instagram/Facebook Page</option>
+            <option>Television</option>
+            <option>News Article</option>
+            <option>Google Ads</option>
+          </select>
+        </label>
+      </fieldset>
 
-        </fieldset>
+      <fieldset>
+        Types of Club Memberships
+        <label
+          ><input type="radio" name="recommend" class="inline" value="Junior
+          membership" />Junior
+          membership</label
+        >
+        <label
+          ><input type="radio" name="recommend" class="inline" value="A regular
+          membership"/>A regular
+          membership</label
+        >
+        <label
+          ><input type="radio" name="recommend" class="inline" value="Honorary
+          memberships"/>Honorary
+          memberships</label
+        >
+      </fieldset>
+      <fieldset>
+        What would you like to see improved? (Check all that apply)
 
-        <fieldset>
-            <label>Where did you hear about us?
-                <select name="dropdown ">
-                    <option>A Friend or colleauge</option>
-                    <option>Instagram/Facebook Page</option>
-                    <option>Television</option>
-                    <option>News Article</option>
-                    <option>Google Ads</option>
-                </select>
-            </label>
-        </fieldset>
+        <label
+          ><input
+            type="checkbox"
+            name="improved"
+            class="inline"
+            value="Front-end Projects"
+          />
+          Front-end Projects</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="improved"
+            class="inline"
+            value="Back-end Projects"
+          />
+          Back-end Projects</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="improved"
+            class="inline"
+            value="Challenges"
+          />
+          Challenges</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="improved"
+            class="inline"
+            value="Open Source Community"
+          />
+          Open Source</label
+        >
+        Community
 
-        <fieldset>
-            Types of Club Memberships
-            <label><input type="radio" name="recommend" class="inline" >Junior membership</label>
-            <label><input type="radio" name="recommend" class="inline" >A regular membership</label>
-            <label><input type="radio" name="recommend" class="inline" >Honorary memberships</label>
+        <label
+          >Any comments or suggestions?
+          <textarea
+            name="comments"
+            rows="3"
+            cols="30"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </label>
+      </fieldset>
 
-        </fieldset>
-        <fieldset>
-            What would you like to see improved? (Check all that apply)
-
-                <label><input type="checkbox" name="improved" class="inline" value="Front-end Projects" /> Front-end Projects</label>
-                <label><input type="checkbox" name="improved" class="inline" value="Back-end Projects" /> Back-end Projects</label>
-                <label><input type="checkbox" name="improved" class="inline" value="Challenges" /> Challenges</label>
-                <label><input type="checkbox" name="improved" class="inline" value="Open Source Community" /> Open Source</label>
-                Community
-           
-
-            <label>Any comments or suggestions?
-                <textarea name="comments" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
-            </label>
-
-        </fieldset>
-
-        <input type="submit" value="Submit" />
-
+      <input id="submit" type="submit" value="Submit" />
     </form>
-</body>
-
+  </body>
 </html>
